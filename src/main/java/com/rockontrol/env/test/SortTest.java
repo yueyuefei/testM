@@ -43,7 +43,6 @@ public class SortTest {
 		listB.add(ab);
 		//根据Collections.sort重载方法来实现
 		Collections.sort(listB,new Comparator<B>(){
-			@Override
 			public int compare(B b1, B b2) {
 				return b1.getOrder().compareTo(b2.getOrder());
 			}
@@ -78,7 +77,6 @@ class A implements Comparable<A>{
 	public String toString() {
 		return "name is "+name+" order is "+order;
 	}
-	@Override
 	public int compareTo(A a) {
 		return this.order.compareTo(a.getOrder());
 	}
