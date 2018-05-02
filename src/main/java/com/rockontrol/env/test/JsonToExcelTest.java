@@ -62,7 +62,7 @@ public class JsonToExcelTest {
 			}
 		}
 		// 通过工具类创建writer
-		ExcelWriter writer = ExcelUtil.getWriter("C:/Users/Administrator/Desktop/writeBean.xlsx");
+		ExcelWriter writer = ExcelUtil.getWriter("C:/Users/Administrator/Desktop/数据.xlsx");
 		// 一次性写出内容，使用默认样式
 		writer.write(array);
 		// 关闭writer，释放内存
