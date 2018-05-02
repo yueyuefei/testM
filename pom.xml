@@ -136,9 +136,9 @@
 			<version>2.3</version>
 		</dependency>
 		<dependency>
-			<groupId>com.xiaoleilu</groupId>
+			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
-			<version>3.3.2</version>
+			<version>4.0.10</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
