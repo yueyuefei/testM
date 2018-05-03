@@ -69,7 +69,6 @@ public class JsonToExcelTest {
 		writer.write(array);
 		// 关闭writer，释放内存
 		writer.close();
-		
 	}
 	
 }
