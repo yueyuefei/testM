@@ -220,9 +220,8 @@ public class HttpUtils {
 			if(files != null && files.size() > 0){
 				for(File file : files){
 					RequestBody fileBody = RequestBody.create(MediaType.parse(contentType),file);
-					builder.addFormDataPart(key,file.getName(), fileBody);
+					builder.setType(MultipartBody.FORM).addFormDataPart(key,file.getName(), fileBody);
 				}
-				
 			}
 			if(nvps != null && nvps.length > 0){
 				for(NameValuePair nv : nvps){
@@ -250,7 +249,7 @@ public class HttpUtils {
 				Set<Entry<String, File>> entrySet = fileMap.entrySet();
 				for(Entry<String, File> es : entrySet){
 					RequestBody fileBody = RequestBody.create(MediaType.parse(contentType),es.getValue());
-					builder.addFormDataPart(es.getKey(),es.getValue().getName(), fileBody);
+					builder.setType(MultipartBody.FORM).addFormDataPart(es.getKey(),es.getValue().getName(), fileBody);
 				}
 				
 			}
@@ -279,7 +278,7 @@ public class HttpUtils {
 			
 			if(mfu != null){
 				RequestBody fileBody = RequestBody.create(MediaType.parse(contentType),mfu.getFile().getBytes());
-				builder.addFormDataPart(mfu.getParam(),mfu.getFile().getOriginalFilename(), fileBody);
+				builder.setType(MultipartBody.FORM).addFormDataPart(mfu.getParam(),mfu.getFile().getOriginalFilename(), fileBody);
 			}
 			
 			MultipartBody multipartBody = builder.build();
